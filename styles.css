@@ -10,8 +10,12 @@
   font-family: regular;
   src: url(assets/fonts/Inter-VariableFont_slnt\wght.ttf);
 }
+.nav__toggle {
+  display: none;
+}
+
 body {
-  padding: 30px;
+  padding: 20px 50px;
 }
 * {
   padding: 0;
@@ -22,18 +26,18 @@ body {
   align-items: center;
 }
 navbar {
-  padding-top: 30px;
+  padding-top: 1em;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   align-items: center;
 }
-.nav-links {
+.nav-lists {
   list-style-type: none;
   display: flex;
 }
-.nav-links li a {
-  padding: 0 20px;
+.nav-lists li a {
+  padding: 0 1em;
   text-decoration: none;
   color: hsl(230, 3%, 47%);
 }
@@ -41,7 +45,7 @@ navbar {
   grid-gap: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.5fr 0.25fr;
+  grid-template-rows: 1fr 0.5fr 0.2fr;
   grid-template-areas:
     "firstImg firstImg sidey"
     "header para sidey"
@@ -57,7 +61,7 @@ p {
   font-family: Interlight;
   color: hsl(230, 3%, 56%);
   padding-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 1em;
   font-size: 1.2rem;
 }
 .card-detail {
@@ -76,9 +80,12 @@ button {
   cursor: pointer;
   font-family: regular;
 }
-
+.IMG {
+  min-width: 248px;
+  width: 100%;
+  height: 100%;
+}
 .first-img {
-  background: url("assets/images/image-web-3-desktop.jpg");
   grid-area: firstImg;
 }
 .side-bar {
@@ -86,7 +93,7 @@ button {
 }
 .intro {
   grid-area: para;
-  margin-bottom: 50px;
+  margin-bottom: 2.5em;
 }
 
 .card1 {
@@ -101,29 +108,27 @@ button {
   display: flex;
   grid-area: card3;
 }
+.IMG1 {
+  width: 100%;
+  height: 100%;
+}
 .card_imgContainer1 {
-  overflow: hidden;
-  background: url("assets/images/image-retro-pcs.jpg");
-  flex: 1;
+  flex: 2;
 }
 .card_imgContainer2 {
-  overflow: hidden;
-  background: url("assets/images/image-top-laptops.jpg");
-  flex: 1;
+  flex: 2;
 }
 .card_imgContainer3 {
-  overflow: hidden;
-  background: url("assets/images/image-gaming-growth.jpg");
-  flex: 1;
+  flex: 2;
 }
 
 .card-content {
   flex: 2.5;
-  padding: 10px 40px;
+  padding: 3px 40px;
 }
 h2 {
   font-size: 1.4rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 h4 {
   font-size: 3.4rem;
@@ -132,4 +137,63 @@ h4 {
 }
 .card-detail {
   font-size: 1.3rem;
+}
+.side-bar {
+  background-color: hsl(240, 100%, 5%);
+  color: white;
+}
+.deco {
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+  padding: 20px;
+  font-family: Inter;
+}
+h3 {
+  padding: 20px;
+}
+.side-bar > p {
+  padding: 0px 20px;
+}
+hr {
+  margin: 20px;
+}
+
+.hr1 {
+  margin: 20px;
+  color: hsl(45, 5%, 16%);
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 2rem;
+}
+
+@media (max-width: 1060px) {
+  .gridsys {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-lists {
+    display: none;
+  }
+  .nav__toggle {
+    display: block;
+    position: absolute;
+    left: 85%;
+  }
+  span.hamburger {
+    color: black;
+    font-weight: bold;
+    font-size: 4rem;
+    background-color: white !important;
+    padding: 10px 20px;
+  }
+  button {
+    background-color: white;
+  }
 }
