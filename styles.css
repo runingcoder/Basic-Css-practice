@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Inter;
+  src: url(assets/fonts/static/Inter-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Interlight;
+  src: url(assets/fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: regular;
+  src: url(assets/fonts/Inter-VariableFont_slnt\wght.ttf);
+}
+body {
+  padding: 30px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.logo {
+  align-items: center;
+}
+navbar {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+.nav-links li a {
+  padding: 0 20px;
+  text-decoration: none;
+  color: hsl(230, 3%, 47%);
+}
+.gridsys {
+  grid-gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 0.25fr;
+  grid-template-areas:
+    "firstImg firstImg sidey"
+    "header para sidey"
+    "card1 card2 card3";
+}
+h1 {
+  font-weight: bold;
+  font-family: Inter;
+  grid-area: header;
+  font-size: 4rem;
+}
+p {
+  font-family: Interlight;
+  color: hsl(230, 3%, 56%);
+  padding-top: 10px;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+.card-detail {
+  font-family: regular;
+
+  color: hsl(230, 3%, 47%);
+}
+button {
+  background-color: hsl(5, 85%, 63%);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: Inter;
+  cursor: pointer;
+  font-family: regular;
+}
+
+.first-img {
+  background: url("assets/images/image-web-3-desktop.jpg");
+  grid-area: firstImg;
+}
+.side-bar {
+  grid-area: sidey;
+}
+.intro {
+  grid-area: para;
+  margin-bottom: 50px;
+}
+
+.card1 {
+  display: flex;
+  grid-area: card1;
+}
+.card2 {
+  display: flex;
+  grid-area: card2;
+}
+.card3 {
+  display: flex;
+  grid-area: card3;
+}
+.card_imgContainer1 {
+  overflow: hidden;
+  background: url("assets/images/image-retro-pcs.jpg");
+  flex: 1;
+}
+.card_imgContainer2 {
+  overflow: hidden;
+  background: url("assets/images/image-top-laptops.jpg");
+  flex: 1;
+}
+.card_imgContainer3 {
+  overflow: hidden;
+  background: url("assets/images/image-gaming-growth.jpg");
+  flex: 1;
+}
+
+.card-content {
+  flex: 2.5;
+  padding: 10px 40px;
+}
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+h4 {
+  font-size: 3.4rem;
+  color: hsl(236, 13%, 42%);
+  margin-bottom: 20px;
+}
+.card-detail {
+  font-size: 1.3rem;
+}
